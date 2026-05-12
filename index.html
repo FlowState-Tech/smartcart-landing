@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SmartCart — Ahorro real en tu ruta de compra | FlowState Tech</title>
+  <meta name="description" content="SmartCart compara precios de góndola, optimiza rutas multi-tienda y valida datos con la comunidad. FlowState Tech." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skipContent">Saltar al contenido</a>
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a href="#/" class="logo" data-link data-nav-item="inicio">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span class="logo-text">SmartCart</span>
+        <span class="logo-sub">FlowState Tech</span>
+      </a>
+      <nav id="site-nav" class="site-nav" data-nav data-i18n-aria="a11y.mainNav">
+        <a href="#/" class="nav-pill" data-link data-nav-item="inicio" data-route="inicio">
+          <svg class="nav-pill__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span data-i18n="nav.inicio">Inicio</span>
+        </a>
+        <a href="#/beneficios" class="nav-pill" data-link data-nav-item="beneficios" data-route="beneficios">
+          <svg class="nav-pill__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span data-i18n="nav.beneficios">Beneficios</span>
+        </a>
+        <a href="#/nosotros" class="nav-pill" data-link data-nav-item="nosotros" data-route="nosotros">
+          <svg class="nav-pill__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span data-i18n="nav.nosotros">Sobre nosotros</span>
+        </a>
+        <a href="#/colaboradores" class="nav-pill" data-link data-nav-item="colaboradores" data-route="colaboradores">
+          <svg class="nav-pill__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+          <span data-i18n="nav.colaboradores">Colaboradores</span>
+        </a>
+        <a href="#/faq" class="nav-pill" data-link data-nav-item="faq" data-route="faq">
+          <svg class="nav-pill__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <span data-i18n="nav.toolbarFaq">FAQ</span>
+        </a>
+        <a class="btn btn--accent btn--sm nav-cta nav-cta--icon" href="#/descarga" data-link data-nav-item="descarga" data-route="descarga">
+          <svg class="nav-pill__icon nav-pill__icon--cta" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span data-i18n="nav.descarga">Descarga aquí</span>
+        </a>
+      </nav>
+      <div class="header-tools">
+        <div class="lang-switch" role="group" data-i18n-aria="a11y.langGroup">
+          <button type="button" class="lang-switch__btn is-active" data-set-lang="es" aria-pressed="true">ES</button>
+          <button type="button" class="lang-switch__btn" data-set-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="sr-only" data-i18n="a11y.menu">Menú</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-backdrop" data-nav-backdrop hidden tabindex="-1" aria-hidden="true"></div>
+
+  <main id="main" class="main" data-outlet></main>
+
+  <nav class="bottom-nav" data-i18n-aria="a11y.bottomNav" data-bottom-nav>
+    <a href="#/" class="bottom-nav__item" data-link data-route="inicio">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span data-i18n="nav.inicio">Inicio</span>
+    </a>
+    <a href="#/beneficios" class="bottom-nav__item" data-link data-route="beneficios">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <span data-i18n="nav.bottomBenef">Beneficios</span>
+    </a>
+    <a href="#/nosotros" class="bottom-nav__item" data-link data-route="nosotros">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <span data-i18n="nav.bottomNosotros">Nosotros</span>
+    </a>
+    <a href="#/colaboradores" class="bottom-nav__item" data-link data-route="colaboradores">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+      <span data-i18n="nav.bottomColab">Equipo</span>
+    </a>
+    <a href="#/descarga" class="bottom-nav__item" data-link data-route="descarga">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      <span data-i18n="nav.bottomDescarga">Descarga</span>
+    </a>
+    <a href="#/faq" class="bottom-nav__item" data-link data-route="faq">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/></svg>
+      <span data-i18n="nav.bottomAyuda">Ayuda</span>
+    </a>
+  </nav>
+
+  <button type="button" class="fab-top" data-back-top data-i18n-aria="a11y.backTop" data-i18n-title="a11y.backTop">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong class="footer-brand">SmartCart</strong>
+        <p class="footer-tag" data-i18n="footer.tag">Claridad financiera, metas de ahorro y navegación GPS rápida.</p>
+      </div>
+      <div>
+        <p class="footer-title" data-i18n="footer.linksTitle">Enlaces</p>
+        <ul class="footer-links">
+          <li><a href="https://github.com/FlowState-Tech/smartcart-report" target="_blank" rel="noopener noreferrer" data-i18n="footer.linkReport">Repositorio del informe</a></li>
+          <li><a href="#/nosotros" data-link data-i18n="footer.linkNosotros">Sobre nosotros</a></li>
+          <li><a href="#/descarga" data-link data-i18n="footer.linkDescarga">Descarga la app</a></li>
+          <li><a href="#/faq" data-link data-i18n="footer.linkFaq">Preguntas frecuentes</a></li>
+          <li><a href="#/colaboradores" data-link data-i18n="footer.linkColab">Colaboradores</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-title" data-i18n="footer.startupTitle">Startup</p>
+        <p class="footer-small" data-i18n="footer.startupBody">Proyecto académico — UPC · Aplicaciones para Dispositivos Móviles · 202610</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 FlowState Tech</span>
+    </div>
+  </footer>
+
+  <div class="overlay" data-overlay hidden></div>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden data-modal>
+    <div class="modal__panel card card--elevated">
+      <button type="button" class="modal__close icon-btn" data-modal-close data-i18n-aria="a11y.closeModal">&times;</button>
+      <h2 id="modal-title" class="modal__title" data-modal-title></h2>
+      <div class="modal__body" data-modal-body></div>
+    </div>
+  </div>
+
+  <template id="tpl-home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Optimizador de rutas y comparador de precios presenciales</p>
+          <h1>
+            <span data-i18n="hero.title1">Tu canasta,</span>
+            <span class="text-gradient" data-i18n="hero.title2">más barata</span>
+            <span data-i18n="hero.title3">y en menos tiempo</span>
+          </h1>
+          <p class="lead" data-i18n-html="hero.leadHtml"></p>
+          <div class="hero-actions">
+            <a class="btn btn--accent btn--pulse" href="#/descarga" data-link data-i18n="hero.ctaDescarga">Descarga aquí</a>
+            <a class="btn btn--secondary" href="#/nosotros" data-link data-i18n="hero.ctaSobre">Sobre nosotros</a>
+            <button type="button" class="btn btn--ghost" data-scroll-target="como-funciona" data-i18n="hero.ctaHow">Cómo funciona</button>
+          </div>
+          <ul class="hero-stats">
+            <li><span class="stat-num" data-i18n="hero.stat1n">~7%</span><span class="stat-label" data-i18n="hero.stat1l">ahorro potencial en canasta (referencia sectorial)</span></li>
+            <li><span class="stat-num" data-i18n="hero.stat2n">25%</span><span class="stat-label" data-i18n="hero.stat2l">meta de reducción de tiempo en ruta multi-tienda</span></li>
+          </ul>
+        </div>
+        <div class="hero-visual card card--elevated">
+          <img
+            src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80"
+            alt=""
+            data-i18n-alt="hero.imgAlt"
+            width="640"
+            height="480"
+            loading="eager"
+            class="hero-img"
+          />
+          <div class="hero-badge">
+            <span class="hero-badge__title" data-i18n="hero.badgeTitle">Ahorro total</span>
+            <span class="hero-badge__value" data-i18n="hero.badgeValue">S/ 42.30</span>
+            <span class="hero-badge__hint" data-i18n="hero.badgeHint">vs. precio de referencia de mercado</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--stats" aria-labelledby="stats-title">
+      <div class="container stats-strip">
+        <h2 id="stats-title" class="sr-only" data-i18n="home.statsSr">Cifras orientativas</h2>
+        <div class="stats-strip__item card card--elevated">
+          <span class="stats-strip__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </span>
+          <span class="stats-strip__num" data-counter="7" data-counter-suffix="%">0</span>
+          <span class="stats-strip__label" data-i18n="home.statStrip1">Ahorro orientativo en canasta</span>
+        </div>
+        <div class="stats-strip__item card card--elevated">
+          <span class="stats-strip__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-secondary)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </span>
+          <span class="stats-strip__num" data-counter="25" data-counter-suffix="%">0</span>
+          <span class="stats-strip__label" data-i18n="home.statStrip2">Meta de tiempo en ruta multi-tienda</span>
+        </div>
+        <div class="stats-strip__item card card--elevated">
+          <span class="stats-strip__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5a7c3a" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/></svg>
+          </span>
+          <span class="stats-strip__num" data-counter="3" data-counter-suffix="+">0</span>
+          <span class="stats-strip__label" data-i18n="home.statStrip3">Paradas inteligentes por recorrido</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint" id="como-funciona">
+      <div class="container">
+        <div class="section-head section-head--icon">
+          <span class="section-head__icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          </span>
+          <h2 class="section-title section-title--inline" data-i18n="home.stepsTitle">Cómo funciona en tu móvil</h2>
+        </div>
+        <p class="section-intro" data-i18n="home.stepsIntro">Toca cada paso para ver el detalle — flujo pensado para compra presencial, no delivery.</p>
+        <div class="home-steps card card--elevated" data-home-steps>
+          <div class="home-steps__rail" role="tablist" aria-label="Pasos">
+            <button type="button" class="home-steps__dot is-active" role="tab" aria-selected="true" data-step-index="1">1</button>
+            <button type="button" class="home-steps__dot" role="tab" aria-selected="false" data-step-index="2">2</button>
+            <button type="button" class="home-steps__dot" role="tab" aria-selected="false" data-step-index="3">3</button>
+            <button type="button" class="home-steps__dot" role="tab" aria-selected="false" data-step-index="4">4</button>
+          </div>
+          <div class="home-steps__panels">
+            <div class="home-steps__panel is-active" role="tabpanel" data-step-panel="1">
+              <h3 data-i18n="home.step1t">Arma tu canasta</h3>
+              <p data-i18n="home.step1p">Lista y presupuesto: comparas el mismo producto o equivalente entre cadenas y formatos cercanos.</p>
+            </div>
+            <div class="home-steps__panel" role="tabpanel" data-step-panel="2" hidden>
+              <h3 data-i18n="home.step2t">Compara precios de góndola</h3>
+              <p data-i18n="home.step2p">Ves ticket estimado y precio por unidad de medida para decidir dónde conviene más.</p>
+            </div>
+            <div class="home-steps__panel" role="tabpanel" data-step-panel="3" hidden>
+              <h3 data-i18n="home.step3t">Ruta óptima</h3>
+              <p data-i18n="home.step3p">SmartCart ordena paradas, tiempos y alternativas 24h si un local está cerrado.</p>
+            </div>
+            <div class="home-steps__panel" role="tabpanel" data-step-panel="4" hidden>
+              <h3 data-i18n="home.step4t">Validación en tienda</h3>
+              <p data-i18n="home.step4p">La comunidad confirma precios; ganas confianza y ayudas a mantener los datos al día.</p>
+            </div>
+          </div>
+        </div>
+        <p class="center mt-3">
+          <a class="btn btn--primary" href="#/descarga" data-link data-i18n="home.stepsCta">Quiero descargar la app</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section section--tint">
+      <div class="container">
+        <div class="section-head section-head--icon">
+          <span class="section-head__icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </span>
+          <h2 class="section-title section-title--inline" data-i18n="home.whyTitle">Por qué no es “una app más de delivery”</h2>
+        </div>
+        <p class="section-intro" data-i18n-html="home.whyIntro"></p>
+        <div class="cards-3">
+          <article class="card card--click" data-open-modal="comparador">
+            <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=600&q=80" alt="" class="card-img" width="400" height="240" />
+            <div class="card-body">
+              <h3 data-i18n="home.c1t">Comparador de canasta universal</h3>
+              <p data-i18n="home.c1p">Transparencia entre cadenas: el mismo SKU o su equivalente, precio por kg y ticket total.</p>
+              <span class="card-cta" data-i18n="home.c1cta">Cómo funciona →</span>
+            </div>
+          </article>
+          <article class="card card--click" data-open-modal="ruta">
+            <img src="https://images.unsplash.com/photo-1569336415962-a049bdffcbe4?w=600&q=80" alt="" class="card-img" width="400" height="240" />
+            <div class="card-body">
+              <h3 data-i18n="home.c2t">Smart-ruta multi-tienda</h3>
+              <p data-i18n="home.c2p">Puntos de parada, tiempos estimados y alternativas 24h cuando un local cierra.</p>
+              <span class="card-cta" data-i18n="home.c2cta">Ver detalle →</span>
+            </div>
+          </article>
+          <article class="card card--click" data-open-modal="crowd">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80" alt="" class="card-img" width="400" height="240" />
+            <div class="card-body">
+              <h3 data-i18n="home.c3t">Validación en tienda</h3>
+              <p data-i18n="home.c3p">La comunidad confirma precios de góndola; gamificación para mantener datos vivos.</p>
+              <span class="card-cta" data-i18n="home.c3cta">Experiencia y reputación →</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="home.segTitle">Segmentos que diseñamos</h2>
+        <div class="split split--media">
+          <div class="split__item card split__media">
+            <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&q=80" alt="" class="split__img" width="480" height="320" loading="lazy" data-i18n-alt="home.segImgAlt" />
+          </div>
+          <div class="split__stack">
+            <div class="split__item card">
+              <h3 data-i18n="home.seg1t">Shoppers planificadores</h3>
+              <p data-i18n="home.seg1p">Familias y profesionales urbanos que comparan formatos de proximidad vs. volumen y quieren claridad presupuestaria.</p>
+            </div>
+            <div class="split__item card">
+              <h3 data-i18n="home.seg2t">Retail y conveniencia</h3>
+              <p data-i18n="home.seg2p">Gerentes de sede que publican ofertas, reducen merma y justifican precios con analítica de conversión.</p>
+            </div>
+          </div>
+        </div>
+        <div class="center stack-btns" style="margin-top: 24px">
+          <a class="btn btn--primary" href="#/beneficios" data-link data-i18n="home.btnBenef">Ver beneficios completos</a>
+          <a class="btn btn--accent" href="#/descarga" data-link data-i18n="home.btnDownload">Descarga aquí</a>
+          <button type="button" class="btn btn--ghost" data-scroll-target="como-funciona" data-i18n="home.btnHowSteps">Ver pasos interactivos</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--colab-teaser section--tint">
+      <div class="container two-col two-col--align-center">
+        <div class="colab-teaser__visual card card--elevated">
+          <img
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=960&q=85"
+            alt=""
+            width="640"
+            height="400"
+            loading="lazy"
+            class="colab-teaser__img colab-teaser__img--group"
+            data-i18n-alt="home.colabGroupAlt"
+          />
+        </div>
+        <div>
+          <p class="eyebrow" data-i18n="home.colabEyebrow">Personas detrás del producto</p>
+          <h2 class="section-title section-title--left" data-i18n="home.colabTitle">Colaboradores</h2>
+          <p class="text-muted" data-i18n="home.colabBody">Un equipo multidisciplinario que lleva SmartCart del informe al prototipo móvil: producto, experiencia de usuario e ingeniería trabajando en conjunto.</p>
+          <a class="btn btn--primary mt-2" href="#/colaboradores" data-link data-i18n="home.colabCta">Ver colaboradores</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--deep">
+      <div class="container two-col">
+        <div class="text-block">
+          <h2 class="section-title section-title--left" data-i18n="home.deepTitle">Qué resuelve SmartCart en el mundo real</h2>
+          <p class="section-intro section-intro--left" data-i18n-html="home.deepIntro"></p>
+          <ul class="checklist">
+            <li data-i18n="home.deepLi1">Comparación de canasta entre cadenas con el mismo SKU o equivalente reconocido por el usuario.</li>
+            <li data-i18n="home.deepLi2">Rutas con varias paradas y estimación de tiempo según formato de tienda (supermercado vs. conveniencia).</li>
+            <li data-i18n="home.deepLi3">Reporte de error de precio y validación en tienda para mantener datos de góndola creíbles.</li>
+            <li data-i18n="home.deepLi4">Listas compartidas y techo de presupuesto para que la compra familiar sea negociable y transparente.</li>
+          </ul>
+        </div>
+        <aside class="card card--elevated home-aside">
+          <p class="eyebrow" data-i18n="home.asideEyebrow">Proyecto académico</p>
+          <h3 data-i18n="home.asideTitle">Basado en evidencia</h3>
+          <p data-i18n="home.asideP1">Las pantallas y flujos siguen historias de usuario, Lean UX y el modelado de dominio documentado en el informe del curso (UPC · Apps móviles · 2026-10).</p>
+          <p class="home-aside__note" data-i18n="home.asideP2">No sustituimos al cajero ni al delivery: potenciamos la decisión antes y durante tu salida a comprar.</p>
+          <a class="btn btn--secondary btn--sm btn--block mt-2" href="https://github.com/FlowState-Tech/smartcart-report" target="_blank" rel="noopener noreferrer" data-i18n="home.asideReport">Ver informe en GitHub</a>
+        </aside>
+      </div>
+    </section>
+  </template>
+
+  <template id="tpl-nosotros">
+    <section class="page-hero page-hero--split">
+      <div class="container two-col two-col--align-center">
+        <div>
+          <h1 data-i18n="nosotros.title">Sobre FlowState Tech</h1>
+          <p class="lead" data-i18n-html="nosotros.lead"></p>
+        </div>
+        <div class="page-hero__visual card card--elevated">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" alt="" width="640" height="420" loading="lazy" class="page-hero__img" data-i18n-alt="nosotros.heroImgAlt" />
+        </div>
+      </div>
+    </section>
+    <section class="section section--tint">
+      <div class="container about-grid">
+        <article class="card card--elevated about-card">
+          <span class="about-card__icon" aria-hidden="true">◎</span>
+          <h2 data-i18n="nosotros.missionTitle">Misión</h2>
+          <p data-i18n="nosotros.missionBody">Devolver claridad al presupuesto familiar y al retail de proximidad con datos de góndola comparables y rutas que respetan tu tiempo.</p>
+        </article>
+        <article class="card card--elevated about-card">
+          <span class="about-card__icon" aria-hidden="true">◇</span>
+          <h2 data-i18n="nosotros.visionTitle">Visión</h2>
+          <p data-i18n="nosotros.visionBody">Una app móvil referente en Perú para compras presenciales inteligentes: menos vueltas, mejor ticket y comunidad que valida precios en tienda.</p>
+        </article>
+        <article class="card card--elevated about-card">
+          <span class="about-card__icon" aria-hidden="true">⚑</span>
+          <h2 data-i18n="nosotros.valuesTitle">Valores</h2>
+          <p data-i18n="nosotros.valuesBody">Transparencia, diseño centrado en evidencia (Lean UX) y ingeniería disciplinada — el informe académico documenta decisiones para que el producto sea auditable.</p>
+        </article>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="nosotros.teamTitle">Equipo y contexto</h2>
+        <p class="section-intro" data-i18n="nosotros.teamIntro">SmartCart nace en la UPC (Aplicaciones para Dispositivos Móviles, 2026-10) como proyecto de startup con foco en experiencia real de compra, no en reparto a domicilio.</p>
+        <div class="split">
+          <div class="split__item card card--elevated">
+            <h3 data-i18n="nosotros.card1t">Producto</h3>
+            <p data-i18n="nosotros.card1p">Historias de usuario, prototipos y métricas de valor alineadas a ahorro y tiempo en ruta.</p>
+          </div>
+          <div class="split__item card card--elevated">
+            <h3 data-i18n="nosotros.card2t">Tecnología</h3>
+            <p data-i18n="nosotros.card2p">Arquitectura preparada para escalar: comparación de canasta, mapa de paradas y validación comunitaria.</p>
+          </div>
+        </div>
+        <div class="center stack-btns mt-3">
+          <a class="btn btn--accent btn--pulse" href="#/descarga" data-link data-i18n="nosotros.cta">Descargar SmartCart</a>
+          <a class="btn btn--secondary" href="#/" data-link data-i18n="nosotros.ctaHome">Volver al inicio</a>
+        </div>
+      </div>
+    </section>
+    <section class="section section--tint">
+      <div class="container narrow">
+        <h2 class="section-title" data-i18n="nosotros.storyTitle">Historia del proyecto</h2>
+        <p data-i18n="nosotros.storyP1">SmartCart surge como respuesta a una frustración cotidiana: comparar precios entre tiendas físicas implica anotar, desplazarse y confiar en memoria o fotos sueltas. Queremos centralizar esa experiencia en una app móvil pensada para Perú.</p>
+        <p data-i18n="nosotros.storyP2">El equipo FlowState Tech combina producto, experiencia de usuario y arquitectura de software. El informe del curso documenta decisiones con historias de usuario, diagramas y flujos entre los módulos de la aplicación.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="nosotros.impactTitle">Impacto que buscamos</h2>
+        <div class="cards-3">
+          <article class="card card--elevated">
+            <h3 data-i18n="nosotros.im1t">Familias</h3>
+            <p data-i18n="nosotros.im1p">Claridad presupuestaria y menos horas perdidas en traslados innecesarios.</p>
+          </article>
+          <article class="card card--elevated">
+            <h3 data-i18n="nosotros.im2t">Retail</h3>
+            <p data-i18n="nosotros.im2p">Visibilidad de ofertas y demanda por zona para afinar surtido y precios.</p>
+          </article>
+          <article class="card card--elevated">
+            <h3 data-i18n="nosotros.im3t">Datos</h3>
+            <p data-i18n="nosotros.im3p">Ciclo virtuoso: más validaciones comunitarias, mejor confianza en el comparador.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </template>
+
+  <template id="tpl-colaboradores">
+    <section class="page-hero page-hero--compact">
+      <div class="container two-col two-col--align-center">
+        <div>
+          <p class="eyebrow" data-i18n="colab.eyebrow">FlowState Tech</p>
+          <h1 data-i18n="colab.title">Colaboradores</h1>
+          <p class="lead" data-i18n-html="colab.lead"></p>
+        </div>
+        <div class="page-hero__visual card card--elevated page-hero__visual--colab-mosaic">
+          <div class="colab-hero-mosaic" role="group" data-i18n-aria="colab.heroMosaicAria">
+            <img src="assets/team/anjali-amaro.png" alt="" width="160" height="160" loading="lazy" class="colab-hero-mosaic__face" />
+            <img src="assets/team/joseph-chavez.png" alt="" width="160" height="160" loading="lazy" class="colab-hero-mosaic__face" />
+            <img src="assets/team/katherine-mejia.png" alt="" width="160" height="160" loading="lazy" class="colab-hero-mosaic__face" />
+            <img src="assets/team/kevin-pardo.png" alt="" width="160" height="160" loading="lazy" class="colab-hero-mosaic__face" />
+            <img src="assets/team/stephano-valdivia.png" alt="" width="160" height="160" loading="lazy" class="colab-hero-mosaic__face" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section--tint">
+      <div class="container">
+        <h2 class="section-title" data-i18n="colab.gridTitle">Quién construye SmartCart</h2>
+        <p class="section-intro" data-i18n="colab.gridIntro">Estudiantes de Ingeniería de Software de la UPC que desarrollan SmartCart como proyecto de aplicaciones móviles.</p>
+        <p class="section-intro text-muted colab-tap-hint" data-i18n="colab.tapPhotoHint"></p>
+        <div class="colab-grid">
+          <article class="colab-card card card--elevated">
+            <button type="button" class="colab-card__photo-btn" data-team-member="1" data-i18n-aria="colab.m1photoAria">
+              <img class="colab-card__photo" src="assets/team/anjali-amaro.png" alt="" width="320" height="320" loading="lazy" data-i18n-alt="colab.m1alt" />
+            </button>
+            <h3 data-i18n="colab.m1name">Anjali Amaro Villar</h3>
+            <p class="colab-card__meta" data-i18n="colab.m1meta">U20221G044 · Ingeniería de Software</p>
+          </article>
+          <article class="colab-card card card--elevated">
+            <button type="button" class="colab-card__photo-btn" data-team-member="2" data-i18n-aria="colab.m2photoAria">
+              <img class="colab-card__photo" src="assets/team/joseph-chavez.png" alt="" width="320" height="320" loading="lazy" data-i18n-alt="colab.m2alt" />
+            </button>
+            <h3 data-i18n="colab.m2name">Joseph Manuel Chavez Viera</h3>
+            <p class="colab-card__meta" data-i18n="colab.m2meta">U202314019 · Ingeniería de Software</p>
+          </article>
+          <article class="colab-card card card--elevated">
+            <button type="button" class="colab-card__photo-btn" data-team-member="3" data-i18n-aria="colab.m3photoAria">
+              <img class="colab-card__photo" src="assets/team/katherine-mejia.png" alt="" width="320" height="320" loading="lazy" data-i18n-alt="colab.m3alt" />
+            </button>
+            <h3 data-i18n="colab.m3name">Katherine Maryory Mejia Aliaga</h3>
+            <p class="colab-card__meta" data-i18n="colab.m3meta">U20221A118 · Ingeniería de Software</p>
+          </article>
+          <article class="colab-card card card--elevated">
+            <button type="button" class="colab-card__photo-btn" data-team-member="4" data-i18n-aria="colab.m4photoAria">
+              <img class="colab-card__photo" src="assets/team/kevin-pardo.png" alt="" width="320" height="320" loading="lazy" data-i18n-alt="colab.m4alt" />
+            </button>
+            <h3 data-i18n="colab.m4name">Kevin Patrick Pardo Chumpitazi</h3>
+            <p class="colab-card__meta" data-i18n="colab.m4meta">U20221A525 · Ingeniería de Software</p>
+          </article>
+          <article class="colab-card card card--elevated">
+            <button type="button" class="colab-card__photo-btn" data-team-member="5" data-i18n-aria="colab.m5photoAria">
+              <img class="colab-card__photo" src="assets/team/stephano-valdivia.png" alt="" width="320" height="320" loading="lazy" data-i18n-alt="colab.m5alt" />
+            </button>
+            <h3 data-i18n="colab.m5name">Stephano Renan Valdivia Quispe</h3>
+            <p class="colab-card__meta" data-i18n="colab.m5meta">U202311294 · Ingeniería de Software</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container narrow center">
+        <p class="text-muted" data-i18n="colab.note">Fotografías aportadas por el equipo FlowState Tech.</p>
+        <div class="stack-btns mt-3">
+          <a class="btn btn--primary" href="#/nosotros" data-link data-i18n="colab.ctaAbout">Sobre la startup</a>
+          <a class="btn btn--secondary" href="https://github.com/FlowState-Tech/smartcart-report" target="_blank" rel="noopener noreferrer" data-i18n="colab.ctaGithub">Informe en GitHub</a>
+        </div>
+      </div>
+    </section>
+  </template>
+
+  <template id="tpl-descarga">
+    <section class="page-hero page-hero--split">
+      <div class="container two-col two-col--align-center">
+        <div>
+          <h1 data-i18n="descarga.title">Descarga SmartCart</h1>
+          <p class="lead" data-i18n-html="descarga.lead"></p>
+          <p class="lead lead--tight" data-i18n="descarga.sublead">La app está pensada para usarse en la calle: manos ocupadas, decisiones rápidas y datos que se actualizan con la comunidad.</p>
+        </div>
+        <div class="page-hero__visual page-hero__visual--phone card card--elevated">
+          <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=640&q=80" alt="" width="400" height="520" loading="lazy" class="page-hero__img page-hero__img--phone" data-i18n-alt="descarga.heroImgAlt" />
+        </div>
+      </div>
+    </section>
+    <section class="section section--tint">
+      <div class="container narrow">
+        <p class="section-intro center" data-i18n="descarga.storesLead">Próximamente en tiendas oficiales. Mientras tanto, reserva tu acceso:</p>
+        <div class="download-badges" role="group" aria-label="Tiendas">
+          <a class="store-badge store-badge--play" href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" data-i18n="descarga.play">Google Play</a>
+          <a class="store-badge store-badge--apple" href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer" data-i18n="descarga.apple">App Store</a>
+        </div>
+        <p class="form-hint center" data-i18n="descarga.storesHint">Enlaces genéricos a tiendas (la ficha de la app se publicará en el lanzamiento).</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container narrow">
+        <h2 class="section-title" data-i18n="descarga.notifyTitle">Avísame al lanzamiento</h2>
+        <p class="section-intro" data-i18n="descarga.notifyLead">Déjanos tu correo; en esta demo todo queda en tu navegador (localStorage), sin servidor.</p>
+        <form class="waitlist card card--elevated" data-waitlist>
+          <label class="field">
+            <span data-i18n="waitlist.email">Correo electrónico</span>
+            <input type="email" name="email" required autocomplete="email" data-i18n-placeholder="waitlist.placeholderPh" />
+          </label>
+          <p class="form-hint" data-i18n="waitlist.hint">Validación de formato como en US03; en producción se conectaría a tu API.</p>
+          <button type="submit" class="btn btn--accent btn--block" data-i18n="waitlist.submit">Registrarme</button>
+          <p class="form-msg" data-waitlist-msg hidden></p>
+        </form>
+        <p class="center mt-3">
+          <a class="btn btn--secondary" href="#/nosotros" data-link data-i18n="descarga.linkNosotros">Conocer al equipo</a>
+        </p>
+      </div>
+    </section>
+    <section class="section section--tint">
+      <div class="container">
+        <h2 class="section-title" data-i18n="descarga.featuresTitle">Qué podrás hacer en la app</h2>
+        <div class="cards-3">
+          <article class="card">
+            <h3 data-i18n="descarga.f1t">Planificar</h3>
+            <p data-i18n="descarga.f1p">Listas, presupuesto y comparación de canasta antes de salir de casa.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="descarga.f2t">Recorrer</h3>
+            <p data-i18n="descarga.f2p">Ruta con paradas ordenadas, tiempos estimados y alternativas 24h.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="descarga.f3t">Validar</h3>
+            <p data-i18n="descarga.f3p">Confirmar precios en góndola y reportar discrepancias con pocos toques.</p>
+          </article>
+        </div>
+        <div class="card card--elevated max-w-prose" style="margin: 2rem auto 0">
+          <h3 class="mt-0" data-i18n="descarga.privacyTitle">Privacidad y demo</h3>
+          <p class="text-muted mb-0" data-i18n="descarga.privacyP">El formulario de aviso en esta landing solo guarda correos en tu navegador (localStorage) para simular un registro; no hay backend. En producción aplicaríamos consentimiento explícito y política de datos personales según normativa peruana.</p>
+        </div>
+      </div>
+    </section>
+  </template>
+
+  <template id="tpl-demo">
+    <section class="page-hero page-hero--compact">
+      <div class="container">
+        <h1 data-i18n="demo.title">Simulador de ahorro</h1>
+        <p class="lead" data-i18n-html="demo.lead"></p>
+      </div>
+    </section>
+    <section class="section section--tint">
+      <div class="container narrow">
+        <div class="card card--elevated demo-panel" data-demo-panel>
+          <label class="field">
+            <span data-i18n="demo.basket">Monto referencial de tu canasta (S/)</span>
+            <input type="range" min="100" max="2000" step="50" value="600" data-demo-basket />
+            <output data-demo-basket-out>S/ 600</output>
+          </label>
+          <label class="field">
+            <span data-i18n="demo.pct">Porcentaje de ahorro al comparar y optimizar ruta (%)</span>
+            <input type="range" min="3" max="25" step="1" value="12" data-demo-pct />
+            <output data-demo-pct-out>12%</output>
+          </label>
+          <label class="field">
+            <span data-i18n="demo.time">Tiempo ahorrado en ruta (min / mes)</span>
+            <input type="range" min="0" max="240" step="15" value="90" data-demo-time />
+            <output data-demo-time-out>90 min</output>
+          </label>
+          <div class="demo-result card">
+            <p class="demo-result__label" data-i18n="demo.resultLabel">Ahorro monetario estimado</p>
+            <p class="demo-result__value" data-demo-money>S/ 72.00</p>
+            <p class="demo-result__hint" data-demo-hint></p>
+          </div>
+          <div class="demo-actions">
+            <button type="button" class="btn btn--primary" data-demo-reset data-i18n="demo.reset">Restablecer</button>
+            <a class="btn btn--accent" href="#/descarga" data-link data-i18n="demo.ctaApp">Quiero la app</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </template>
+
+  <template id="tpl-beneficios">
+    <section class="page-hero page-hero--split">
+      <div class="container two-col two-col--align-center">
+        <div>
+          <h1 data-i18n="beneficios.title">Beneficios alineados al producto</h1>
+          <p class="lead" data-i18n="beneficios.lead">Contenido derivado de la propuesta de valor y las hipótesis Lean UX del informe SmartCart.</p>
+          <p class="lead lead--tight" data-i18n="beneficios.lead2">Cada beneficio conecta con historias de usuario del backlog: presupuesto, desplazamiento y confianza en datos.</p>
+        </div>
+        <div class="page-hero__visual card card--elevated">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80" alt="" width="640" height="400" loading="lazy" class="page-hero__img" data-i18n-alt="beneficios.heroImgAlt" />
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container benefit-list">
+        <article class="benefit-row card card--elevated">
+          <img src="https://images.unsplash.com/photo-1578916171728-46688e8478c4?w=400&q=80" alt="" width="200" height="200" class="benefit-row__img" />
+          <div>
+            <h2 data-i18n="beneficios.b1t">Presupuesto y canasta familiar</h2>
+            <p data-i18n="beneficios.b1p">Listas compartidas, presupuesto máximo y comparación por peso o unidad para decisiones justas.</p>
+            <p class="text-muted" data-i18n="beneficios.b1e">Incluye alertas cuando un ítem se acerca al tope y sugerencias de sustitutos más baratos por zona.</p>
+          </div>
+        </article>
+        <article class="benefit-row card card--elevated">
+          <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=400&q=80" alt="" width="200" height="200" class="benefit-row__img" />
+          <div>
+            <h2 data-i18n="beneficios.b2t">Menos traslado, misma lista</h2>
+            <p data-i18n="beneficios.b2p">Rutas que combinan supermercado y conveniencia cercana; el sistema prioriza desplazamiento y disponibilidad.</p>
+            <p class="text-muted" data-i18n="beneficios.b2e">Si un local cierra o no tiene stock, la app propone la siguiente mejor parada sin recomenzar desde cero.</p>
+          </div>
+        </article>
+        <article class="benefit-row card card--elevated">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80" alt="" width="200" height="200" class="benefit-row__img" />
+          <div>
+            <h2 data-i18n="beneficios.b3t">Datos que puedes confiar</h2>
+            <p data-i18n="beneficios.b3p">Alertas de oferta, reporte de error de precio y Trust Profile alimentado por calificaciones y reseñas.</p>
+            <p class="text-muted" data-i18n="beneficios.b3e">La reputación de tienda verificada y la comunidad refuerzan la calidad del comparador de góndola.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="section section--tint">
+      <div class="container">
+        <h2 class="section-title" data-i18n="beneficios.proTitle">Propuesta de valor en tres capas</h2>
+        <p class="section-intro" data-i18n-html="beneficios.proIntro"></p>
+        <div class="benefit-banner card card--elevated">
+          <img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=1200&q=80" alt="" width="1080" height="360" loading="lazy" class="benefit-banner__img" data-i18n-alt="beneficios.bannerAlt" />
+        </div>
+        <div class="split">
+          <div class="split__item card">
+            <h3 data-i18n="beneficios.pro1t">Ahorro monetario</h3>
+            <p data-i18n="beneficios.pro1p">Comparación explícita de ticket y unidad de medida para que el ahorro sea medible, no solo “sensación”.</p>
+          </div>
+          <div class="split__item card">
+            <h3 data-i18n="beneficios.pro2t">Ahorro de tiempo</h3>
+            <p data-i18n="beneficios.pro2p">Menos zigzag entre góndolas y calles: la ruta ordena paradas y reduce esperas improductivas.</p>
+          </div>
+        </div>
+        <ul class="checklist max-w-prose" style="margin-top: 1.5rem">
+          <li data-i18n="beneficios.proLi1">Integración con GPS para guiar el recorrido físico, no solo listas estáticas.</li>
+          <li data-i18n="beneficios.proLi2">Roles diferenciados: consumidor planifica; gerente de sede publica ofertas y stock.</li>
+          <li data-i18n="beneficios.proLi3">Base documental en GitHub para auditar decisiones de producto y arquitectura.</li>
+        </ul>
+        <p class="center mt-3">
+          <a class="btn btn--accent" href="#/descarga" data-link data-i18n="beneficios.ctaDescarga">Llévame a la descarga</a>
+        </p>
+      </div>
+    </section>
+  </template>
+
+  <template id="tpl-dominio">
+    <section class="page-hero page-hero--compact">
+      <div class="container">
+        <h1 data-i18n="dominio.title">Dominio impulsado por DDD</h1>
+        <p class="lead" data-i18n-html="dominio.lead"></p>
+      </div>
+    </section>
+    <section class="section section--tint">
+      <div class="container">
+        <h2 class="section-title" data-i18n="dominio.classTitle">Clasificación estratégica</h2>
+        <div class="pill-row">
+          <span class="pill pill--core" data-i18n="dominio.pillCore">Core</span>
+          <span class="pill pill--support" data-i18n="dominio.pillSupport">Supporting</span>
+          <span class="pill pill--generic" data-i18n="dominio.pillGeneric">Generic</span>
+        </div>
+        <div class="context-grid" data-context-grid></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="dominio.flowsTitle">Flujos entre contextos</h2>
+        <p class="section-intro" data-i18n="dominio.flowsIntro">Escenarios de integración del modelado de mensajes de dominio (vista resumida).</p>
+        <div class="scenario-grid">
+          <button type="button" class="scenario-card card card--click" data-open-modal="flow1">
+            <img src="https://raw.githubusercontent.com/FlowState-Tech/smartcart-report/main/assets/domain-message-flows/inventory-management.png" alt="" class="scenario-card__img" loading="lazy" width="320" height="180" />
+            <span data-i18n="dominio.sc1">Registro y verificación de tienda</span>
+          </button>
+          <button type="button" class="scenario-card card card--click" data-open-modal="flow2">
+            <img src="https://raw.githubusercontent.com/FlowState-Tech/smartcart-report/main/assets/domain-message-flows/shopping-planning.png" alt="" class="scenario-card__img" loading="lazy" width="320" height="180" />
+            <span data-i18n="dominio.sc2">Planificación de compra</span>
+          </button>
+          <button type="button" class="scenario-card card card--click" data-open-modal="flow3">
+            <img src="https://raw.githubusercontent.com/FlowState-Tech/smartcart-report/main/assets/domain-message-flows/shopping-journey.png" alt="" class="scenario-card__img" loading="lazy" width="320" height="180" />
+            <span data-i18n="dominio.sc3">Recorrido y ruta óptima</span>
+          </button>
+          <button type="button" class="scenario-card card card--click" data-open-modal="flow4">
+            <img src="https://raw.githubusercontent.com/FlowState-Tech/smartcart-report/main/assets/domain-message-flows/post-purchase-experience.png" alt="" class="scenario-card__img" loading="lazy" width="320" height="180" />
+            <span data-i18n="dominio.sc4">Post-compra y experiencia</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </template>
+
+  <template id="tpl-context-detail">
+    <section class="page-hero page-hero--compact">
+      <div class="container">
+        <nav class="breadcrumb"><a href="#/dominio" data-link data-i18n="contextDetail.back">← Dominio DDD</a></nav>
+        <h1 data-bc-title></h1>
+        <p class="lead" data-bc-tagline></p>
+        <span class="pill" data-bc-pill></span>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container two-col">
+        <div class="card card--elevated">
+          <h2 data-i18n="contextDetail.resp">Responsabilidad</h2>
+          <p data-bc-desc></p>
+          <h3 class="mt-3" data-i18n="contextDetail.layers">Capas tácticas</h3>
+          <ul class="checklist" data-bc-layers></ul>
+        </div>
+        <div>
+          <img class="detail-hero-img card" data-bc-image src="" alt="" width="640" height="400" />
+          <div class="center mt-3">
+            <a class="btn btn--secondary" href="https://github.com/FlowState-Tech/smartcart-report" target="_blank" rel="noopener noreferrer" data-i18n="contextDetail.github">Abrir informe en GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </template>
+
+  <template id="tpl-mapa">
+    <section class="page-hero">
+      <div class="container">
+        <h1 data-i18n="mapa.title">Cobertura y zonas piloto</h1>
+        <p class="lead" data-i18n-html="mapa.lead"></p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="map-layout card card--elevated">
+          <div class="map-visual" aria-hidden="true">
+            <div class="map-pin map-pin--a">Lince</div>
+            <div class="map-pin map-pin--b">Surquillo</div>
+            <div class="map-route"></div>
+          </div>
+          <div class="map-copy">
+            <h2 data-i18n="mapa.h2">Ruta multi-parada</h2>
+            <p data-i18n="mapa.p">El recorrido conecta puntos de parada verificados: conveniencia para compras rápidas y supermercado para volumen y marca blanca.</p>
+            <ul class="checklist">
+              <li data-i18n="mapa.li1">Priorización de calles con acceso vehicular cuando aplica</li>
+              <li data-i18n="mapa.li2">Sustitución sugerida a tienda 24h si un local está cerrado</li>
+              <li data-i18n="mapa.li3">Estimación de tiempo según formato de tienda</li>
+            </ul>
+            <a class="btn btn--primary" href="#/lista-espera" data-link data-i18n="mapa.cta">Quiero acceso anticipado</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </template>
+
+  <template id="tpl-informe">
+    <section class="page-hero">
+      <div class="container">
+        <h1 data-i18n="informe.title">Documentación del proyecto</h1>
+        <p class="lead" data-i18n="informe.lead">Informe académico con Lean UX, needfinding, historias de usuario, DDD estratégico y táctico, y arquitectura C4.</p>
+        <a class="btn btn--accent" href="https://github.com/FlowState-Tech/smartcart-report" target="_blank" rel="noopener noreferrer" data-i18n="informe.cta">Ver repositorio smartcart-report</a>
+      </div>
+    </section>
+    <section class="section section--tint">
+      <div class="container">
+        <div class="cards-2">
+          <article class="card">
+            <h2 data-i18n="informe.esTitle">Event Storming</h2>
+            <p data-i18n="informe.esBody">Big Picture documentado con apertura, exploración y cierre del flujo de eventos de dominio.</p>
+            <img src="https://raw.githubusercontent.com/FlowState-Tech/smartcart-report/main/assets/ddd/big-picture/big-picture-final.png" alt="" data-i18n-alt="informe.esAlt" class="card-img card-img--contain mt-2" loading="lazy" width="640" height="360" />
+          </article>
+          <article class="card">
+            <h2 data-i18n="informe.ubTitle">Lenguaje ubicuo</h2>
+            <p data-i18n="informe.ubBody">Términos compartidos: Canasta, Ruta óptima, Error de precio, Trust Profile, ShoppingRoute…</p>
+            <a class="btn btn--secondary btn--sm" href="https://github.com/FlowState-Tech/smartcart-report/blob/main/README.md#236-ubiquitous-language" target="_blank" rel="noopener noreferrer" data-i18n="informe.ubBtn">Leer glosario en el README</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </template>
+
+  <template id="tpl-lista-espera">
+    <section class="page-hero page-hero--compact">
+      <div class="container narrow">
+        <h1 data-i18n="waitlist.title">Lista de espera</h1>
+        <p class="lead" data-i18n="waitlist.lead">Déjanos tu correo para avisarte del lanzamiento (demo local — no se envía a ningún servidor).</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container narrow">
+        <form class="waitlist card card--elevated" data-waitlist>
+          <label class="field">
+            <span data-i18n="waitlist.email">Correo electrónico</span>
+            <input type="email" name="email" required autocomplete="email" data-i18n-placeholder="waitlist.placeholderPh" />
+          </label>
+          <p class="form-hint" data-i18n="waitlist.hint">Validación de formato como en US03; en producción se conectaría a tu API.</p>
+          <button type="submit" class="btn btn--accent btn--block" data-i18n="waitlist.submit">Registrarme</button>
+          <p class="form-msg" data-waitlist-msg hidden></p>
+        </form>
+      </div>
+    </section>
+  </template>
+
+  <template id="tpl-faq">
+    <section class="page-hero page-hero--split">
+      <div class="container two-col two-col--align-center">
+        <div>
+          <h1 data-i18n="faq.title">Preguntas frecuentes</h1>
+          <p class="lead" data-i18n="faq.lead">Pestañas por perfil — misma idea de UX que landings de producto con FAQ categorizado.</p>
+          <p class="lead lead--tight" data-i18n="faq.lead2">Si no encuentras lo que buscas, revisa la sección Colaboradores o el repositorio del informe en GitHub.</p>
+        </div>
+        <div class="page-hero__visual card card--elevated">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80" alt="" width="640" height="400" loading="lazy" class="page-hero__img" data-i18n-alt="faq.heroImgAlt" />
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container narrow faq" data-faq>
+        <div class="faq-tabs" role="tablist" data-i18n-aria="a11y.faqCategories">
+          <button type="button" class="faq-tab is-active" role="tab" aria-selected="true" aria-controls="faq-panel-consumidor" id="faq-tab-consumidor" data-faq-tab="consumidor" data-i18n="faq.tabC">Consumidor</button>
+          <button type="button" class="faq-tab" role="tab" aria-selected="false" aria-controls="faq-panel-retail" id="faq-tab-retail" data-faq-tab="retail" data-i18n="faq.tabR">Retail</button>
+          <button type="button" class="faq-tab" role="tab" aria-selected="false" aria-controls="faq-panel-tecnico" id="faq-tab-tecnico" data-faq-tab="tecnico" data-i18n="faq.tabT">Técnico</button>
+        </div>
+        <div class="faq-panels">
+          <div class="faq-panel is-active" role="tabpanel" id="faq-panel-consumidor" aria-labelledby="faq-tab-consumidor" data-faq-panel="consumidor">
+            <details class="card faq__item" open>
+              <summary data-i18n="faq.c1q">¿SmartCart vende productos o cobra delivery?</summary>
+              <p data-i18n-html="faq.c1a"></p>
+            </details>
+            <details class="card faq__item">
+              <summary data-i18n="faq.c2q">¿Cómo me ayuda a ahorrar?</summary>
+              <p data-i18n-html="faq.c2a"></p>
+            </details>
+            <details class="card faq__item">
+              <summary data-i18n="faq.c3q">¿Los precios son confiables?</summary>
+              <p data-i18n-html="faq.c3a"></p>
+            </details>
+            <details class="card faq__item">
+              <summary data-i18n="faq.c4q">¿Necesito crear muchas cuentas?</summary>
+              <p data-i18n-html="faq.c4a"></p>
+            </details>
+          </div>
+          <div class="faq-panel" role="tabpanel" id="faq-panel-retail" aria-labelledby="faq-tab-retail" hidden data-faq-panel="retail">
+            <details class="card faq__item" open>
+              <summary data-i18n="faq.r1q">¿Cómo afilio mi sucursal?</summary>
+              <p data-i18n-html="faq.r1a"></p>
+            </details>
+            <details class="card faq__item">
+              <summary data-i18n="faq.r2q">¿Puedo publicar ofertas relámpago?</summary>
+              <p data-i18n-html="faq.r2a"></p>
+            </details>
+            <details class="card faq__item">
+              <summary data-i18n="faq.r3q">¿Hay analítica para mi tienda?</summary>
+              <p data-i18n-html="faq.r3a"></p>
+            </details>
+            <details class="card faq__item">
+              <summary data-i18n="faq.r4q">¿Cómo se muestran mis ofertas?</summary>
+              <p data-i18n-html="faq.r4a"></p>
+            </details>
+          </div>
+          <div class="faq-panel" role="tabpanel" id="faq-panel-tecnico" aria-labelledby="faq-tab-tecnico" hidden data-faq-panel="tecnico">
+            <details class="card faq__item" open>
+              <summary data-i18n="faq.t1q">¿Qué es un bounded context?</summary>
+              <p data-i18n-html="faq.t1a"></p>
+            </details>
+            <details class="card faq__item">
+              <summary data-i18n="faq.t2q">¿Dónde está documentado el diseño?</summary>
+              <p data-i18n-html="faq.t2a"></p>
+            </details>
+            <details class="card faq__item">
+              <summary data-i18n="faq.t3q">¿Qué es ShoppingRoute?</summary>
+              <p data-i18n-html="faq.t3a"></p>
+            </details>
+            <details class="card faq__item">
+              <summary data-i18n="faq.t4q">¿Cómo se relacionan los bounded contexts?</summary>
+              <p data-i18n-html="faq.t4a"></p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </template>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
