@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SmartCart — Ahorro real en tu ruta de compra | FlowState Tech</title>
   <meta name="description" content="SmartCart compara precios de góndola, optimiza rutas multi-tienda y valida datos con la comunidad. FlowState Tech." />
+  <link rel="icon" href="assets/smartcart-logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/smartcart-logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -15,7 +17,15 @@
   <header class="site-header" data-header>
     <div class="container header-inner">
       <a href="#/" class="logo" data-link data-nav-item="inicio">
-        <span class="logo-mark" aria-hidden="true"></span>
+        <img
+          class="logo-img"
+          src="assets/smartcart-logo.png"
+          alt=""
+          width="44"
+          height="44"
+          decoding="async"
+          data-i18n-alt="a11y.logoAlt"
+        />
         <span class="logo-text">SmartCart</span>
         <span class="logo-sub">FlowState Tech</span>
       </a>
@@ -104,7 +114,7 @@
       <div>
         <p class="footer-title" data-i18n="footer.linksTitle">Enlaces</p>
         <ul class="footer-links">
-          <li><a href="https://github.com/FlowState-Tech/smartcart-report" target="_blank" rel="noopener noreferrer" data-i18n="footer.linkReport">Repositorio del informe</a></li>
+          <li><a href="https://github.com/FlowState-Tech/smartcart-report" target="_blank" rel="noopener noreferrer" data-i18n="footer.linkReport">Documentación y código (GitHub)</a></li>
           <li><a href="#/nosotros" data-link data-i18n="footer.linkNosotros">Sobre nosotros</a></li>
           <li><a href="#/descarga" data-link data-i18n="footer.linkDescarga">Descarga la app</a></li>
           <li><a href="#/faq" data-link data-i18n="footer.linkFaq">Preguntas frecuentes</a></li>
@@ -112,8 +122,8 @@
         </ul>
       </div>
       <div>
-        <p class="footer-title" data-i18n="footer.startupTitle">Startup</p>
-        <p class="footer-small" data-i18n="footer.startupBody">Proyecto académico — UPC · Aplicaciones para Dispositivos Móviles · 202610</p>
+        <p class="footer-title" data-i18n="footer.startupTitle">FlowState Tech</p>
+        <p class="footer-small" data-i18n="footer.startupBody">Startup peruana. SmartCart está en desarrollo activo: comparación en tienda, rutas inteligentes y datos validados por la comunidad.</p>
       </div>
     </div>
     <div class="container footer-bottom">
@@ -318,7 +328,7 @@
         <div>
           <p class="eyebrow" data-i18n="home.colabEyebrow">Personas detrás del producto</p>
           <h2 class="section-title section-title--left" data-i18n="home.colabTitle">Colaboradores</h2>
-          <p class="text-muted" data-i18n="home.colabBody">Un equipo multidisciplinario que lleva SmartCart del informe al prototipo móvil: producto, experiencia de usuario e ingeniería trabajando en conjunto.</p>
+          <p class="text-muted" data-i18n="home.colabBody">Anjali, Joseph, Katherine, Kevin y Stephano — ingeniería, diseño y producto detrás de SmartCart.</p>
           <a class="btn btn--primary mt-2" href="#/colaboradores" data-link data-i18n="home.colabCta">Ver colaboradores</a>
         </div>
       </div>
@@ -337,11 +347,11 @@
           </ul>
         </div>
         <aside class="card card--elevated home-aside">
-          <p class="eyebrow" data-i18n="home.asideEyebrow">Proyecto académico</p>
-          <h3 data-i18n="home.asideTitle">Basado en evidencia</h3>
-          <p data-i18n="home.asideP1">Las pantallas y flujos siguen historias de usuario, Lean UX y el modelado de dominio documentado en el informe del curso (UPC · Apps móviles · 2026-10).</p>
+          <p class="eyebrow" data-i18n="home.asideEyebrow">Cómo trabajamos</p>
+          <h3 data-i18n="home.asideTitle">Producto con rigor</h3>
+          <p data-i18n="home.asideP1">Diseñamos pantallas y flujos a partir de entrevistas con compradores y retail, prototipos iterados y métricas claras de ahorro y tiempo. La documentación de producto y arquitectura vive en GitHub para que el roadmap sea trazable.</p>
           <p class="home-aside__note" data-i18n="home.asideP2">No sustituimos al cajero ni al delivery: potenciamos la decisión antes y durante tu salida a comprar.</p>
-          <a class="btn btn--secondary btn--sm btn--block mt-2" href="https://github.com/FlowState-Tech/smartcart-report" target="_blank" rel="noopener noreferrer" data-i18n="home.asideReport">Ver informe en GitHub</a>
+          <a class="btn btn--secondary btn--sm btn--block mt-2" href="https://github.com/FlowState-Tech/smartcart-report" target="_blank" rel="noopener noreferrer" data-i18n="home.asideReport">Ver repositorio en GitHub</a>
         </aside>
       </div>
     </section>
@@ -374,14 +384,14 @@
         <article class="card card--elevated about-card">
           <span class="about-card__icon" aria-hidden="true">⚑</span>
           <h2 data-i18n="nosotros.valuesTitle">Valores</h2>
-          <p data-i18n="nosotros.valuesBody">Transparencia, diseño centrado en evidencia (Lean UX) y ingeniería disciplinada — el informe académico documenta decisiones para que el producto sea auditable.</p>
+          <p data-i18n="nosotros.valuesBody">Transparencia, diseño centrado en la persona usuaria e ingeniería disciplinada: decisiones de producto documentadas para que el roadmap sea coherente y auditable.</p>
         </article>
       </div>
     </section>
     <section class="section">
       <div class="container">
-        <h2 class="section-title" data-i18n="nosotros.teamTitle">Equipo y contexto</h2>
-        <p class="section-intro" data-i18n="nosotros.teamIntro">SmartCart nace en la UPC (Aplicaciones para Dispositivos Móviles, 2026-10) como proyecto de startup con foco en experiencia real de compra, no en reparto a domicilio.</p>
+        <h2 class="section-title" data-i18n="nosotros.teamTitle">Equipo y enfoque</h2>
+        <p class="section-intro" data-i18n="nosotros.teamIntro">FlowState Tech construye SmartCart para el comprador peruano que sale a tienda: comparar antes de pagar, recorrer menos y confiar en lo que ve en góndola — sin convertirnos en delivery.</p>
         <div class="split">
           <div class="split__item card card--elevated">
             <h3 data-i18n="nosotros.card1t">Producto</h3>
@@ -400,9 +410,9 @@
     </section>
     <section class="section section--tint">
       <div class="container narrow">
-        <h2 class="section-title" data-i18n="nosotros.storyTitle">Historia del proyecto</h2>
+        <h2 class="section-title" data-i18n="nosotros.storyTitle">Por qué existe SmartCart</h2>
         <p data-i18n="nosotros.storyP1">SmartCart surge como respuesta a una frustración cotidiana: comparar precios entre tiendas físicas implica anotar, desplazarse y confiar en memoria o fotos sueltas. Queremos centralizar esa experiencia en una app móvil pensada para Perú.</p>
-        <p data-i18n="nosotros.storyP2">El equipo FlowState Tech combina producto, experiencia de usuario y arquitectura de software. El informe del curso documenta decisiones con historias de usuario, diagramas y flujos entre los módulos de la aplicación.</p>
+        <p data-i18n="nosotros.storyP2">FlowState Tech combina producto, experiencia de usuario e ingeniería. Priorizamos iteración con usuarios reales, métricas de ahorro y un roadmap público en GitHub.</p>
       </div>
     </section>
     <section class="section">
@@ -448,7 +458,7 @@
     <section class="section section--tint">
       <div class="container">
         <h2 class="section-title" data-i18n="colab.gridTitle">Quién construye SmartCart</h2>
-        <p class="section-intro" data-i18n="colab.gridIntro">Estudiantes de Ingeniería de Software de la UPC que desarrollan SmartCart como proyecto de aplicaciones móviles.</p>
+        <p class="section-intro" data-i18n="colab.gridIntro">Equipo de ingeniería de software y diseño de FlowState Tech que construye SmartCart para compradores y retail en Perú.</p>
         <p class="section-intro text-muted colab-tap-hint" data-i18n="colab.tapPhotoHint"></p>
         <div class="colab-grid">
           <article class="colab-card card card--elevated">
@@ -609,9 +619,9 @@
     <section class="page-hero page-hero--split">
       <div class="container two-col two-col--align-center">
         <div>
-          <h1 data-i18n="beneficios.title">Beneficios alineados al producto</h1>
-          <p class="lead" data-i18n="beneficios.lead">Contenido derivado de la propuesta de valor y las hipótesis Lean UX del informe SmartCart.</p>
-          <p class="lead lead--tight" data-i18n="beneficios.lead2">Cada beneficio conecta con historias de usuario del backlog: presupuesto, desplazamiento y confianza en datos.</p>
+          <h1 data-i18n="beneficios.title">Beneficios que notarás en la calle</h1>
+          <p class="lead" data-i18n="beneficios.lead">Cada función responde a compradores y retail: presupuesto claro, menos vueltas y datos en los que puedes confiar.</p>
+          <p class="lead lead--tight" data-i18n="beneficios.lead2">Desde la lista en casa hasta la última parada del día, SmartCart ordena la información para que decidas rápido.</p>
         </div>
         <div class="page-hero__visual card card--elevated">
           <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80" alt="" width="640" height="400" loading="lazy" class="page-hero__img" data-i18n-alt="beneficios.heroImgAlt" />
@@ -678,7 +688,7 @@
   <template id="tpl-dominio">
     <section class="page-hero page-hero--compact">
       <div class="container">
-        <h1 data-i18n="dominio.title">Dominio impulsado por DDD</h1>
+        <h1 data-i18n="dominio.title">Arquitectura del producto</h1>
         <p class="lead" data-i18n-html="dominio.lead"></p>
       </div>
     </section>
@@ -722,7 +732,7 @@
   <template id="tpl-context-detail">
     <section class="page-hero page-hero--compact">
       <div class="container">
-        <nav class="breadcrumb"><a href="#/dominio" data-link data-i18n="contextDetail.back">← Dominio DDD</a></nav>
+        <nav class="breadcrumb"><a href="#/dominio" data-link data-i18n="contextDetail.back">← Arquitectura del producto</a></nav>
         <h1 data-bc-title></h1>
         <p class="lead" data-bc-tagline></p>
         <span class="pill" data-bc-pill></span>
@@ -739,7 +749,7 @@
         <div>
           <img class="detail-hero-img card" data-bc-image src="" alt="" width="640" height="400" />
           <div class="center mt-3">
-            <a class="btn btn--secondary" href="https://github.com/FlowState-Tech/smartcart-report" target="_blank" rel="noopener noreferrer" data-i18n="contextDetail.github">Abrir informe en GitHub</a>
+            <a class="btn btn--secondary" href="https://github.com/FlowState-Tech/smartcart-report" target="_blank" rel="noopener noreferrer" data-i18n="contextDetail.github">Abrir repositorio en GitHub</a>
           </div>
         </div>
       </div>
@@ -779,8 +789,8 @@
   <template id="tpl-informe">
     <section class="page-hero">
       <div class="container">
-        <h1 data-i18n="informe.title">Documentación del proyecto</h1>
-        <p class="lead" data-i18n="informe.lead">Informe académico con Lean UX, needfinding, historias de usuario, DDD estratégico y táctico, y arquitectura C4.</p>
+        <h1 data-i18n="informe.title">Documentación técnica</h1>
+        <p class="lead" data-i18n="informe.lead">Repositorio abierto con historias de usuario, diagramas de arquitectura y notas de implementación.</p>
         <a class="btn btn--accent" href="https://github.com/FlowState-Tech/smartcart-report" target="_blank" rel="noopener noreferrer" data-i18n="informe.cta">Ver repositorio smartcart-report</a>
       </div>
     </section>
@@ -788,13 +798,13 @@
       <div class="container">
         <div class="cards-2">
           <article class="card">
-            <h2 data-i18n="informe.esTitle">Event Storming</h2>
-            <p data-i18n="informe.esBody">Big Picture documentado con apertura, exploración y cierre del flujo de eventos de dominio.</p>
+            <h2 data-i18n="informe.esTitle">Visión general del producto</h2>
+            <p data-i18n="informe.esBody">Diagrama de flujo entre comprador, tiendas y validaciones en tienda: cómo se conectan listas, precios y recorridos.</p>
             <img src="https://raw.githubusercontent.com/FlowState-Tech/smartcart-report/main/assets/ddd/big-picture/big-picture-final.png" alt="" data-i18n-alt="informe.esAlt" class="card-img card-img--contain mt-2" loading="lazy" width="640" height="360" />
           </article>
           <article class="card">
-            <h2 data-i18n="informe.ubTitle">Lenguaje ubicuo</h2>
-            <p data-i18n="informe.ubBody">Términos compartidos: Canasta, Ruta óptima, Error de precio, Trust Profile, ShoppingRoute…</p>
+            <h2 data-i18n="informe.ubTitle">Glosario de la app</h2>
+            <p data-i18n="informe.ubBody">Términos que verás en SmartCart: canasta, ruta óptima, error de precio, perfil de confianza, recorrido guardado…</p>
             <a class="btn btn--secondary btn--sm" href="https://github.com/FlowState-Tech/smartcart-report/blob/main/README.md#236-ubiquitous-language" target="_blank" rel="noopener noreferrer" data-i18n="informe.ubBtn">Leer glosario en el README</a>
           </article>
         </div>
@@ -830,7 +840,7 @@
         <div>
           <h1 data-i18n="faq.title">Preguntas frecuentes</h1>
           <p class="lead" data-i18n="faq.lead">Pestañas por perfil — misma idea de UX que landings de producto con FAQ categorizado.</p>
-          <p class="lead lead--tight" data-i18n="faq.lead2">Si no encuentras lo que buscas, revisa la sección Colaboradores o el repositorio del informe en GitHub.</p>
+          <p class="lead lead--tight" data-i18n="faq.lead2">Si no encuentras lo que buscas, visita Colaboradores o el repositorio público en GitHub.</p>
         </div>
         <div class="page-hero__visual card card--elevated">
           <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80" alt="" width="640" height="400" loading="lazy" class="page-hero__img" data-i18n-alt="faq.heroImgAlt" />
