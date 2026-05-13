@@ -1930,3 +1930,4 @@ input[type="range"] {
   margin-bottom: calc(var(--space) * 1);
   opacity: 0.35;
 }
+/* Add a subtle floating animation to the icons */
