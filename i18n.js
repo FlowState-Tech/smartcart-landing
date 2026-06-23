@@ -139,6 +139,10 @@ const MESSAGES = {
       colabCta: "Ver colaboradores",
       colabTeaserAlt: "Equipo colaborando en proyecto (imagen referencial)",
       colabGroupAlt: "Grupo de personas trabajando en equipo en oficina (imagen referencial)",
+      aboutProductTitle: "Sobre el producto",
+      aboutProductIntro: "Descubre cómo SmartCart funciona en un recorrido rápido por la app.",
+      aboutTeamTitle: "Sobre el equipo",
+      aboutTeamIntro: "Conoce a las personas detrás de FlowState Tech y SmartCart.",
     },
     demo: {
       title: "Simulador de ahorro",
@@ -591,6 +595,10 @@ const MESSAGES = {
       colabCta: "Meet the team",
       colabTeaserAlt: "Team collaborating on a project (reference photo)",
       colabGroupAlt: "Group of people working together in an office (reference photo)",
+      aboutProductTitle: "About the product",
+      aboutProductIntro: "See how SmartCart works in a quick walkthrough of the app.",
+      aboutTeamTitle: "About the team",
+      aboutTeamIntro: "Meet the people behind FlowState Tech and SmartCart.",
     },
     demo: {
       title: "Savings simulator",
